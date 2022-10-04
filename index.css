@@ -1,0 +1,89 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    /* justify-content: center;
+    align-items: center;
+    flex-direction: row; */
+    height: 100vh;
+    text-align: center;
+    background-image: url("img.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+
+}
+#open-btn{
+    width: 200px;
+    height: 55px;
+    border-radius: 8%;
+    border: 1px solid whitesmoke;
+    background:transparent ; 
+    color: whitesmoke;
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    transition: .6s ease-in ;
+
+}
+#open-btn:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+#modalContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none;
+    background-color: rgba(0, 0, 0, .2);
+    animation-name: modalAnimate;
+    animation-duration:0.4s ;
+}
+#modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    width: 200px;
+    border: 1px solid whitesmoke;
+    border-radius: 8%;
+    height: 100px;
+    color: black;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+
+}
+
+#close-btn{
+    font-size: 2.5rem;
+    color: red;
+    cursor: pointer;
+
+}
+
+@keyframes modalAnimate{
+    from{
+        top:-300px;
+        opacity:0;
+    }
+    to{
+        top: 50px;
+        opacity: 1;
+    }
+}
